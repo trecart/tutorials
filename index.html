@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 	<head>
-		<title>i12bretro Tutorials</title>
+		<title>trecart Tutorials</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 		<script type="text/javascript" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
@@ -20,7 +20,7 @@
 		<div id="gridContainer">
 			<div class="topMargin"></div>
 			<div id="listName" class="topMargin">
-				<h1>i12bretro Tutorials</h1>
+				<h1>trecart Tutorials</h1>
 			</div>
 			<div></div>
 			<div id="content">
@@ -38,7 +38,7 @@
 	<script>
 		$.ajax({ type:'GET', dataType: 'json', cache: false, url: './data.json', success: function(r){ 
 				r.forEach((tut) => {
-					$('#tutorialList').append(`<tr><td align="center">${('0000'+ tut.i).slice(-4)}</td><td><a href="https://i12bretro.github.io/tutorials/${('0000'+ tut.i).slice(-4)}.html" target="_blank">${tut.t}</a></td><td align="center"><a href="https://youtu.be/${tut.v}" target="_blank"><img src="images/youtube.png" alt="View on YouTube" title="View on YouTube" class="viewIcon" /></a></td><td align="center">${new Date((tut.d * 1000)).toLocaleString().replace(', ',' ')}</td></tr>`);
+					$('#tutorialList').append(`<tr><td align="center">${('0000'+ tut.i).slice(-4)}</td><td><a href="https://trecart.github.io/tutorials/${('0000'+ tut.i).slice(-4)}.html" target="_blank">${tut.t}</a></td><td align="center"><a href="https://youtu.be/${tut.v}" target="_blank"><img src="images/youtube.png" alt="View on YouTube" title="View on YouTube" class="viewIcon" /></a></td><td align="center">${new Date((tut.d * 1000)).toLocaleString().replace(', ',' ')}</td></tr>`);
 				});
 				initTable();
 			}
